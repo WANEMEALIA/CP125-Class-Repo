@@ -1,20 +1,18 @@
 # Lab 02 Exercise 4: Dynamic Parking Rate
 # Write your code below:
 
-def calculate_hourly_rate(vehicle_type, hour):
-    # Electric vehicles
+def get_hourly_rate(vehicle_type, hour):
     if vehicle_type.lower() == "electric":
-        return 2.0
+        return 2.00
 
-    # Hybrid vehicles
     elif vehicle_type.lower() == "hybrid":
-        if hour >= 22 or hour < 6:
-            return 2.0
+        if hour >= 22 or hour <= 6:
+            return 2.00
         else:
-            return 5.0
+            return 5.00
 
-    # All other vehicles
     else:
-        return 5.0
+        return 5.00
+
 
 print("Testing Dynamic Parking Rate...")
