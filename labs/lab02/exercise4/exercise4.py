@@ -12,5 +12,7 @@ def get_hourly_rate(vehicle_type, hour_24):
             rate = 5
     else: 
         rate = 5
+    
+    return rate
 # Test your code here
 print("Testing Dynamic Parking Rate...")
