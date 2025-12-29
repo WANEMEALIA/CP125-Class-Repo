@@ -33,7 +33,7 @@ def calculate_total_distance(initial_height):
     if is_ball_stopped(next_height):
         return initial_height
     else:
-        return initial_height + 2 * next_height + calculate_total_distance(initial_height)
+        return initial_height + (calculate_bounce_count(initial_height) * 2)
     
 height = 100
 print("Bounce count:", calculate_bounce_count(height))
