@@ -12,5 +12,7 @@ def count_stops(stations, start, stop):
     if start_point == -1 or end_point == -1 :
         return -1
     
-    count = end_point - start_point
-    return count
+    if start_point > end_point :
+        return start_point - end_point
+    else:
+        return end_point - start_point
