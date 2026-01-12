@@ -3,7 +3,16 @@ def find_bottleneck_index(traceroute):
     """
     Find the index of the hop where the largest latency jump begins.
     """
-    pass
+    max_jump = 0
+    bottleneck_index = 0
+    for i in range (len(traceroute) - 1):
+
+        if jump > max_jump:
+            max_jump = jump
+            bottleneck_index = i
+
+    return bottleneck_index
+
 
 
 # Test
