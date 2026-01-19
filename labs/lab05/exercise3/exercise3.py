@@ -12,9 +12,6 @@ def find_bottleneck_index(traceroute):
             bottleneck_index = i
 
     return bottleneck_index
-
-
-
 # Test
 traceroute = ((1, 5), (2, 8), (3, 45), (4, 48), (5, 50))
 result = find_bottleneck_index(traceroute)
