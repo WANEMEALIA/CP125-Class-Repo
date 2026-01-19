@@ -6,7 +6,9 @@ def find_bottleneck_index(traceroute):
     max_jump = 0
     bottleneck_index = 0
     for i in range (len(traceroute) - 1):
-
+        current_latency = traceroute[i][1]
+        next_latency = traceroute[i+1][1]
+        jump = abs(next_latency - current_latency)
         if jump > max_jump:
             max_jump = jump
             bottleneck_index = i
