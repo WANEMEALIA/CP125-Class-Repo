@@ -20,8 +20,6 @@ def process_numbers():
     # Largest number
     largest = max(numbers)
     print(f"Largest number: {largest}")
-    print("=== Code Execution Successful ===")
-
 
 # Call the function
 process_numbers()
