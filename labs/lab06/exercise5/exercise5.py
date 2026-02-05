@@ -1,4 +1,5 @@
 def audit_zero_trust(baseline_set, current_log_list):
+<<<<<<< HEAD
     current_set = set(current_log_list)
 
     authorized = baseline_set & current_set
@@ -6,3 +7,6 @@ def audit_zero_trust(baseline_set, current_log_list):
     inactive_authorised = baseline_set - current_set
 
     return (authorized, alerts, inactive_authorised)
+=======
+   pass
+>>>>>>> upstream/main
