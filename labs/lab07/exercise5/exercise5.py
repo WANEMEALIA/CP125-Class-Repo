@@ -1,8 +1,17 @@
 def find_at_risk_departments(departments, threshold):
-    # TODO: Your code here
-    # Hint: use .values() on the inner dict — no nested for loop
-    pass
+    at_risk = []
+    for i in departments:
+        scores = departments[i].values()
+        total_students = len(scores)
+        below_count = 0
 
+        for i in scores :
+            if i < threshold :
+                below_count += 1
+                
+        if below_count > total_students/2:
+            at_risk.append(i)
+    return sorted(at_risk)
 
 departments = {
     "CS":      {"Ali": 85, "Sara": 55, "Zaki": 62},
