@@ -1,5 +1,18 @@
 import pandas as pd
 
-
 def high_performers(filename):
-    pass
+    df = pd.read_csv(filename)
+
+    mask = (df["Math"] > 85) & (df["Science"] > 85) & (df["English"] > 85)
+
+    high_students = df[mask]["Name"]
+
+    result = {
+        "count": len(high_students),
+        "names": set(high_students)
+    }
+
+    return result
+
+df = high_performers("labs/lab09/data/students.csv")
+print(df)

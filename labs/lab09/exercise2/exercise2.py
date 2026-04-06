@@ -20,3 +20,4 @@ def compare_averages(filename):
     averages["worst_subject"] = worst_subject
 
     return averages
+
